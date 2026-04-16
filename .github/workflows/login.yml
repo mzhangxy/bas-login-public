@@ -1,4 +1,4 @@
-name: SAP BTP Auto Run BAS
+name: Auto Run BAS
 
 on:
   #schedule:
