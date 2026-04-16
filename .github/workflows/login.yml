@@ -1,4 +1,4 @@
-name: SAP BTP Auto Run BAS (单账号版)
+name: SAP BTP Auto Run BAS
 
 on:
   #schedule:
