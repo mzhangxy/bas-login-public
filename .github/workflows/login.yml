@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 拉取私库代码
         uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/sap-bas-startup
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -24,7 +27,7 @@ jobs:
       - name: Run BAS automation script
         run: node login.js
         env:
-          # 替换为单账号所需的环境变量
+          # 单账号环境变量
           SAP_EMAIL: ${{ secrets.SAP_EMAIL }}
           SAP_PASSWORD: ${{ secrets.SAP_PASSWORD }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
