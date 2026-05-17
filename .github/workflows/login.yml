@@ -1,8 +1,8 @@
 name: Auto Run BAS
 
 on:
-  #schedule:
-    #- cron: "12 */12 * * *"   # 每5天运行一次（UTC 0点）
+  schedule:
+    - cron: "16 2 * * *"   # 每天运行一次（UTC 0点）
   workflow_dispatch:
 
 jobs:
